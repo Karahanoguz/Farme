@@ -10,7 +10,7 @@ require 'faker'
 Product.destroy_all
 # User.destroy_all
 
-user = User.new(email: 'ratata@gmail.com', password: '123456')
+user = User.new(email: 'lalala@gmail.com', password: '2222222')
 user.save!
 
 # count = 0
