@@ -1,17 +1,14 @@
 class OrdersController < ApplicationController
   def show
-
+    @order = Order.find(params[:id])
   end
 
   def new
-
-  end
-
-  def create
-
+    @order = Order.new
   end
 
   def destroy
-
+    @order = Order.find(params[:id])
+    @order.destroy
   end
 end
