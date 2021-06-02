@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>FarMe</h1>
+<p></p>
+
+<%= simple_form_for :search, url: products_path, method: :get do |f| %>
+    <%= f.input :query, label: false, placeholder: "Find a product" %>
+    <%= f.submit "Search" %>
+<% end %>
