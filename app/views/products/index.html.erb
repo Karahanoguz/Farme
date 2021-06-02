@@ -1,9 +1,10 @@
 <h1>Your results</h1>
 
-<div>
+<div class="card-trip">
 <% if @products.first.present? %>
 <% @products.each do |product|%>
-  <div>
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
  <!-- <%#if boat.photo.attached? %>
    <%#= cl_image_tag boat.photo.key %>
 <%#end %> -->
@@ -12,12 +13,16 @@
         <h2> <%= product.name %></h2>
         <p> <%= product.detail %></p>
       </div>
-      <h2>€ <%= product.price %></h2>
+      <h2 class="card-trip-pricing">€ <%= product.price %></h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
     <%= link_to "", product_path(product), class: "card-link" %>
   </div>
 <% end %>
 <% else %>
-  <h3>NO PRODUCTS FOUND AT THIS LOCATION</h3>
+  <h3>Sorry, we don't have this product 😔</h3>
 <% end %>
 </div>
+
+
+
