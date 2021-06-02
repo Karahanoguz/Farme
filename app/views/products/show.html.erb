@@ -1,0 +1,31 @@
+<div class="d-flex flex-column justify-content-around height">
+<h1 class="top-margin d-flex justify-content-center">Product Information</h1>
+
+<div class="card-boat">
+  <%# if @boat.photo.attached? %>
+    <!-- <div class="d-flex justify-content-center flex-edit">
+     <%#= cl_image_tag @boat.photo.key %>
+    </div> -->
+  <%# end %>
+  <div class="d-flex justify-content-center">
+    <div class="d-flex flex-column">
+      <h4> NAME: <%= @product.name %></h4>
+      <h4> <%= @product.product_category%> </h4>
+      <h4> SOURCE: <%= @product.location %> </h4>
+      <h4> DETAILS: <%= @product.details %> </h4>
+      <h4> PRICE: € <%= @product.price %> </h4>
+    </div>
+  </div>
+</div>
+<hr>
+<!--
+<div class="d-flex justify-content-around">
+  <p class="btn btn-primary"><%#= link_to "Book now", new_boat_booking_path(@boat), class: "btn btn-flat" %></p>
+  <p class="btn btn-primary"><%#= link_to "Edit boat information", edit_boat_path, class: "btn btn-flat" %></p>
+  <p class="btn btn-primary"> <%#= link_to "Delete #{@boat.name}", boat_path(@boat), class: "btn btn-flat",
+    method: :delete,
+    data: { confirm: "Are you sure?" } %>
+  </p>
+</div>
+</div>
+ -->
