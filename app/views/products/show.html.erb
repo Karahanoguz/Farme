@@ -1,27 +1,35 @@
-<div class="d-flex flex-column justify-content-around height">
+<div class="d-flex flex-column justify-content-around">
 <h1 class="top-margin d-flex justify-content-center">Product Information</h1>
 
-<div class="card-boat">
+<div class="card">
   <%# if @boat.photo.attached? %>
     <!-- <div class="d-flex justify-content-center flex-edit">
      <%#= cl_image_tag @boat.photo.key %>
     </div> -->
   <%# end %>
-  <div class="d-flex justify-content-center">
-    <div class="d-flex flex-column">
-      <h4> NAME: <%= @product.name %></h4>
-      <h4> CATEGORY: <%= @product.product_category%> </h4>
-      <h4> SOURCE: <%= @product.location %> </h4>
-      <h4> DETAILS: <%= @product.detail %> </h4>
-      <h4> PRICE: € <%= @product.price %> </h4>
+  <div>
+    <img class="image-resize" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="">
+  </div>
+  <div class="d-flex justify-content-center text">
+    <div class="d-flex">
+      <div>
+        <p> NAME: <%= @product.name %></h4>
+        <p> CATEGORY: <%= @product.product_category %> </h4>
+        <p> SOURCE: <%= @product.location %> </h4>
+        <p> DETAILS: <%= @product.detail %> </h4>
+        <p> PRICE: € <%= @product.price %> </h4>
+      </div>
+      <div>
+        <h1>button here</h1>
+      </div>
     </div>
   </div>
-  <div>
-    <%= simple_form_for [ @product, @order_product ] do |f| %>
-      <%= f.input :quantity %>
-      <%= f.submit "Please enter quantity", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+  <!-- <div>
+    <%#= simple_form_for [ @product, @order_product ] do |f| %>
+      <%#= f.input :quantity %>
+      <%#= f.submit "Please enter quantity", class: "btn btn-primary" %>
+    <#% end %>
+  </div> -->
 </div>
 <hr>
 
