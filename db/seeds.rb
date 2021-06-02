@@ -24,7 +24,7 @@ puts "Creating a new product"
     detail: Faker::Food.description,
     location: Faker::Address.country,
     price: rand(10..100),
-    # user_id: user.id
+    user_id: user.id
     )
   # boat.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   product.save!
