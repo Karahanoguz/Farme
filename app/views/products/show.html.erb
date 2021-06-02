@@ -10,14 +10,22 @@
   <div class="d-flex justify-content-center">
     <div class="d-flex flex-column">
       <h4> NAME: <%= @product.name %></h4>
-      <h4> <%= @product.product_category%> </h4>
+      <h4> CATEGORY: <%= @product.product_category%> </h4>
       <h4> SOURCE: <%= @product.location %> </h4>
       <h4> DETAILS: <%= @product.detail %> </h4>
       <h4> PRICE: € <%= @product.price %> </h4>
     </div>
   </div>
+  <div>
+    <%= simple_form_for [ @product, @order_product ] do |f| %>
+      <%= f.input :quantity %>
+      <%= f.submit "Please enter quantity", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
 <hr>
+
+
 <!--
 <div class="d-flex justify-content-around">
   <p class="btn btn-primary"><%#= link_to "Book now", new_boat_booking_path(@boat), class: "btn btn-flat" %></p>
