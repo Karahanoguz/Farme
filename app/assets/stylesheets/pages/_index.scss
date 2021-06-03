@@ -1,16 +1,25 @@
 // Import page-specific CSS files here.
 @import "home";
 
-.card-product{
+.main-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  width: 50%;
 }
 
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 462px;
+  height: 348px;
+  border-radius: 10px;
+  flex-grow: 1;
 }
 
 .card-trip > img {
