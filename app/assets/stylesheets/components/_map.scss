@@ -12,12 +12,6 @@
   display: flex;
 }
 
-#map {
-  height: 100vh;
-  position: sticky;
-  top: 0;
-}
-
 @media(max-width: 992px) {
   .cards {
     grid-template-columns: 1fr 1fr;
