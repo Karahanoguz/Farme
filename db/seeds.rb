@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+Order.destroy_all
+OrderProduct.destroy_all
 Product.destroy_all
 User.destroy_all
 
@@ -15,8 +17,7 @@ user.save!
 
 # count = 0
 
-# chees = Product.new(name: "Pecorino", product_category: "chees", detail: "Pecorino cheeses are hard Italian cheeses made from sheep's milk. The name pecorino derives from pecora which means sheep in Italian.", location: "Italy", price: 15)
-# chees.save!
+# cheese = Product.new(name: "Pecorino", product_category: "cheese", detail: "Pecorino cheeses are hard Italian cheeses made from sheep's milk. The name pecorino derives from pecora which means sheep in Italian.", location: "Italy", price: 15)
 
 10.times do
 puts "Creating a new product"
