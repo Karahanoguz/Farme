@@ -1,5 +1,6 @@
 .mapboxgl-popup {
   max-width: 200px;
+  background-color: red;
 }
 
 .mapboxgl-popup-content {
@@ -9,16 +10,6 @@
 
 .main-container {
   display: flex;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
-
-.cards {
-  flex-grow: 1;
 }
 
 #map {
