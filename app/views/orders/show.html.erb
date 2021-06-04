@@ -2,15 +2,15 @@
 <h1 class="top-margin d-flex justify-content-center">Order Information</h1>
 </div>
 
-<div class="card-boat">
+<div class="card-trip">
   <% if @order.product.photo.attached? %>
-    <div class="d-flex justify-content-center flex-edit">
+    <div>
      <%= cl_image_tag @order.product.photo.key %>
     </div>
   <% end %>
 
-  <div class="d-flex justify-content-center">
-    <div class="d-flex flex-column">
+  <div class="card-trip-infos">
+    <div>
       <% @order.order_products.each do |item|%>
       <h4> NAME: <%= item.product.name %></h4>
       <h4> LOCATION: <%= item.product.location %></h4>
