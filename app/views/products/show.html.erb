@@ -4,7 +4,7 @@
 
 <div class="card">
   <% if @product.photo.attached? %>
-   <div class="d-flex justify-content-center flex-edit">
+   <div >
      <%= cl_image_tag @product.photo.key %>
     </div>
   </div>

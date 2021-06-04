@@ -1,12 +1,15 @@
 .card {
   background: #f3e6d5;
-  padding: 15px;
   border-radius: 33px;
   width: 500px;
   margin: 0 auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
 }
 
+.card img{
+  width: 100%;
+}
 .m-container{display:grid;
   grid-template-columns: 2fr 2fr;
   grid-gap:16px;

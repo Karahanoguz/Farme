@@ -2,15 +2,37 @@
 @import "home";
 
 .main-container {
+  width: 100%;
+  margin: 0;
   display: flex;
+  justify-content: space-between;
 }
 
 #map {
   position: sticky;
   top: 0;
-  margin-left: 50%;
   padding-bottom: 10px;
+  width: 50%;
+  margin-right: 20px;
 }
+
+.card-trip-index {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  border-radius: 10px;
+  width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 670px;
+  background-size: cover;
+}
+
+.card-trip-index img {
+  width: 100%;
+}
+
 
 .card-trip {
   overflow: hidden;
@@ -18,8 +40,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
   border-radius: 10px;
-  width: 26%;
+  width: auto;
   margin-left: 20px;
+  margin-right: 20px;
+  padding: 16px;
+
 }
 
 .card-trip > img {
@@ -40,9 +65,14 @@
   margin: 0;
 }
 
+.card-trip .card-trip-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
 
 .card-trip .card-trip-infos {
-  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
