@@ -4,13 +4,11 @@
 <div class="card-trip">
 <% if @products.first.present? %>
 <% @products.each do |product|%>
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
- <!-- <%#if boat.photo.attached? %>
-   <%#= cl_image_tag boat.photo.key %>
-<%#end %> -->
+    <%if product.photo.attached? %>
+   <%= cl_image_tag product.photo.key %>
+<%end %>
+    <div class="card-trip-infos">
     <div>
-      <div>
         <h2> <%= product.name %></h2>
         <p> <%= product.detail %></p>
       </div>
