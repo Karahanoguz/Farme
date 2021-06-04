@@ -17,7 +17,10 @@ user.save!
 
 count = 0
 
+pecorino = URI.open("https://www.alnatura.de/-/media/Alnatura/B2C/Bilder/magazin/warenkunde/Kaesegruppen/Pecorino_2400x1350.jpg?h=810&mw=1440&w=1440&hash=1927D643FC649446533AA1F5486EC1C1")
 product = Product.new(name: "Pecorino", product_category: "cheese", detail: "Pecorino cheeses are hard Italian cheeses made from sheep's milk. The name pecorino derives from pecora which means sheep in Italian.", location: "Italy", price: 15, user_id: user.id)
+product.photo.attach(io: pecorino, filename: 'nes.png', content_type: 'image/png')
+  product.save!
 
 product.save!
 10.times do
