@@ -2,16 +2,16 @@
   <div class="flex-hero">
     <div class="cta">
       <h1>Do you want to know the farmers around you?</h1>
+      <div class="search-bar-container">
+        <div class="search-bar-input">
+          <%= simple_form_for :search, html: { class: "flexsearch"}, url: products_path, method: :get do |f| %>
+          <%= f.input :query, label: false, placeholder: "Find a product" %>
+          <%= f.submit "Search" %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-  <div class="search-bar-container">
-    <div class="search-bar-input">
-      <%= simple_form_for :search, url: products_path, method: :get do |f| %>
-      <%= f.input :query, label: false, placeholder: "Find a product" %>
-      <%= f.submit "Search" %>
-      <% end %>
-    </div>
 </div>
 
 <div class="container-info">
@@ -33,13 +33,3 @@
 
   </div>
 </div>
-
-<footer>
-  <div class="container-footer">
-    <div class="flex-logo">
-      <div >
-        <%= image_tag "logo_Green.png", class:"logo-footer-img" %>
-      </div>
-    </div>
-  </div>
-      </footer>
