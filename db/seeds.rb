@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-Order.destroy_all
 OrderProduct.destroy_all
+Order.destroy_all
 Product.destroy_all
 User.destroy_all
 
@@ -17,8 +17,9 @@ user.save!
 
 # count = 0
 
-# cheese = Product.new(name: "Pecorino", product_category: "cheese", detail: "Pecorino cheeses are hard Italian cheeses made from sheep's milk. The name pecorino derives from pecora which means sheep in Italian.", location: "Italy", price: 15)
+product = Product.new(name: "Pecorino", product_category: "cheese", detail: "Pecorino cheeses are hard Italian cheeses made from sheep's milk. The name pecorino derives from pecora which means sheep in Italian.", location: "Italy", price: 15, user_id: user.id)
 
+product.save!
 10.times do
 puts "Creating a new product"
 # links = ['https://res.cloudinary.com/vale-sapi/image/upload/v1622111484/barca10_tqg2pu.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111485/barca9_plxxsu.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111484/barca8_zwwykc.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111484/barca7_tlkya3.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111466/barca5_urv3bq.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111465/barca6_jmegac.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111465/barca4_xujewk.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111465/barca3_udzo6d.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111230/barca2_xtkudl.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111208/barca1_f5vqqj.jpg']
