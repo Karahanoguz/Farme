@@ -5,23 +5,6 @@
     <h1 class="top-margin d-flex justify-content-center">Order Information</h1>
   </div>
 
-  <!-- <div class="card-boat">
-    <%# if @booking.boat.photo.attached? %>
-      <div class="d-flex justify-content-center flex-edit">
-       <%#= cl_image_tag @booking.boat.photo.key %>
-      </div>
-    <%# end %> -->
-
-    <div class="d-flex justify-content-center">
-      <div class="d-flex flex-column">
-        <% @order.order_products.each do |item|%>
-          <h4> NAME: <%= item.product.name %></h4>
-          <h4> LOCATION: <%= item.product.location %></h4>
-          <h4> DETAILS: <%= item.product.detail %></h4>
-          <h4> QUANTITY: <%= item.quantity %></h4>
-          <h4> TOTAL PRICE: € <%= item.product.price * item.quantity %></h4>
-        <% end %>
-      </div>
 
 <div class="card-trip">
   <div class="card-trip-infos">
