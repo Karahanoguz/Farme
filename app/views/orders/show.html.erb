@@ -1,5 +1,6 @@
 <% if @order.status.nil? %>
 
+
   <div class="d-flex flex-column justify-content-around height">
     <h1 class="top-margin d-flex justify-content-center">Order Information</h1>
   </div>
@@ -21,6 +22,18 @@
           <h4> TOTAL PRICE: € <%= item.product.price * item.quantity %></h4>
         <% end %>
       </div>
+
+<div class="card-trip">
+  <div class="card-trip-infos">
+    <div>
+      <% @order.order_products.each do |item|%>
+      <h4> NAME: <%= item.product.name %></h4>
+      <h4> LOCATION: <%= item.product.location %></h4>
+      <h4> DETAILS: <%= item.product.detail %></h4>
+      <h4> QUANTITY: <%= item.quantity %></h4>
+      <h4> TOTAL PRICE: € <%= item.product.price * item.quantity %></h4>
+      <% end %>
+
     </div>
   </div>
 

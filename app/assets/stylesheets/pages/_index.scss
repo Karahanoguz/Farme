@@ -6,20 +6,20 @@
 }
 
 #map {
-  height: 100vh;
   position: sticky;
   top: 0;
-  width: 50%;
+  margin-left: 50%;
+  padding-bottom: 10px;
 }
 
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 462px;
-  height: 348px;
+  position: relative;
   border-radius: 10px;
-  flex-grow: 1;
+  width: 26%;
+  margin-left: 20px;
 }
 
 .card-trip > img {

@@ -34,6 +34,7 @@ body {
   flex-direction: column;
   display: flex;
   justify-content: space-between;
+  background-position: center;
 }
 
 .cta > h1 {
@@ -43,8 +44,9 @@ body {
 
 /* --- Search bar --- */
 
-.search-bar-container {
+.flexsearch {
   display: flex;
+  justify-content: space-between;
 }
 
 .search-bar-input {
@@ -54,6 +56,9 @@ body {
   border-radius: 10px;
   padding: 20px;
   margin-right: 50px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
 }
 
 .search-bar-btn {
@@ -62,6 +67,7 @@ body {
   flex-grow: 0.3;
   border-radius: 10px;
   padding: 20px;
+  border-radius: 10px;
 }
 
 /* --- Infographic --- */
@@ -81,6 +87,8 @@ body {
     flex-direction: column;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .area {
