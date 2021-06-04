@@ -15,15 +15,15 @@ User.destroy_all
 user = User.new(email: 'lalala@gmail.com', password: '2222222')
 user.save!
 
-# count = 0
+count = 0
 
 product = Product.new(name: "Pecorino", product_category: "cheese", detail: "Pecorino cheeses are hard Italian cheeses made from sheep's milk. The name pecorino derives from pecora which means sheep in Italian.", location: "Italy", price: 15, user_id: user.id)
 
 product.save!
 10.times do
 puts "Creating a new product"
-# links = ['https://res.cloudinary.com/vale-sapi/image/upload/v1622111484/barca10_tqg2pu.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111485/barca9_plxxsu.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111484/barca8_zwwykc.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111484/barca7_tlkya3.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111466/barca5_urv3bq.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111465/barca6_jmegac.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111465/barca4_xujewk.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111465/barca3_udzo6d.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111230/barca2_xtkudl.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622111208/barca1_f5vqqj.jpg']
-# file = URI.open(links[count])
+  links = ['https://res.cloudinary.com/vale-sapi/image/upload/v1622802936/FarMe/F1_m18gid.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622802923/FarMe/F5_rwgwtr.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622802921/FarMe/F9_hvx1fy.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622802921/FarMe/F10_a1dhxp.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622802921/FarMe/F7_r5mmga.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622802920/FarMe/F8_oybck9.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622802920/FarMe/F6_p0d5th.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622802920/FarMe/F2_yp95je.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622802920/FarMe/F4_uxxxwg.jpg', 'https://res.cloudinary.com/vale-sapi/image/upload/v1622803229/FarMe/F11.jpeg_pvsl57.jpg']
+  file = URI.open(links[count])
   product = Product.new(
     name: Faker::Food.dish,
     product_category: Faker::Food.ingredient,
@@ -32,7 +32,7 @@ puts "Creating a new product"
     price: rand(10..100),
     user_id: user.id
     )
-  # boat.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  product.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   product.save!
-  # count += 1
+  count += 1
 end
