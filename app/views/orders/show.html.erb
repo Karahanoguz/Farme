@@ -3,12 +3,6 @@
 </div>
 
 <div class="card-trip">
-  <% if @order.product.photo.attached? %>
-    <div>
-     <%= cl_image_tag @order.product.photo.key %>
-    </div>
-  <% end %>
-
   <div class="card-trip-infos">
     <div>
       <% @order.order_products.each do |item|%>
