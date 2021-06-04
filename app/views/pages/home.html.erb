@@ -1,8 +1,45 @@
-<h1>FarMe</h1>
-<p></p>
+<div class="container-hero">
+  <div class="flex-hero">
+    <div class="cta">
+      <h1>Do you want to know the farmers around you?</h1>
+    </div>
+  </div>
+</div>
+  <div class="search-bar-container">
+    <div class="search-bar-input">
+      <%= simple_form_for :search, url: products_path, method: :get do |f| %>
+      <%= f.input :query, label: false, placeholder: "Find a product" %>
+      <%= f.submit "Search" %>
+      <% end %>
+    </div>
+</div>
 
-<%= simple_form_for :search, url: products_path, method: :get do |f| %>
-    <%= f.input :query, label: false, placeholder: "Find a product" %>
-    <%= f.submit "Search" %>
-<% end %>
+<div class="container-info">
+  <div class="flex-card">
+    <div class="card-area">
+      <%= image_tag "icon_area.png", class:"area" %>
+      <h2>Find your area</h2>
+    </div>
 
+    <div class="card-area">
+      <%= image_tag "icon_products.png", class:"area" %>
+      <h2>Choose your product</h2>
+    </div>
+
+    <div class="card-area">
+      <%= image_tag "icon_door.png", class:"area" %>
+      <h2>Open your door</h2>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container-footer">
+    <div class="flex-logo">
+      <div >
+        <%= image_tag "logo_Green.png", class:"logo-footer-img" %>
+      </div>
+    </div>
+  </div>
+      </footer>
