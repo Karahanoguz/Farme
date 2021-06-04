@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :order
+  belongs_to :order_product
 
   validates :content, presence: true
   validates :rating, presence: true
