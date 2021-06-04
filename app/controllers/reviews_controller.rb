@@ -8,8 +8,9 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @order = Order.find(params[:order_id])
     @review.order = @order
+    @review.product = @product
     if @review.save
-      redirect_to order_path(@order)
+      redirect_to product_path(@product)
     else
       render 'orders/show'
     end
