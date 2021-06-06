@@ -1,7 +1,4 @@
-.mapboxgl-popup {
-  max-width: 200px;
-  background-color: #caf7e3;
-}
+
 
 .mapboxgl-popup-content {
   text-align: center;
@@ -14,7 +11,7 @@
 
 @media(max-width: 992px) {
   .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -23,3 +20,19 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+// class="mapboxgl-canvas"
+// width: 551px;
+// height: 1200px;
+// /* margin-left: auto; */
+// margin-right: 100px;
+// padding-right: 20px;
+
+
+// .mapboxgl-map {
+// font: 12px/20px Helvetica Neue,Arial,Helvetica,sans-serif;
+// /* overflow: hidden; */
+// position: relative;
+// -webkit-tap-highlight-color: rgba(0,0,0,0);
+// }

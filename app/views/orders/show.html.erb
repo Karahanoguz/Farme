@@ -1,49 +1,37 @@
 <% if @order.status.nil? %>
 
-
-  <div class="d-flex flex-column justify-content-around height">
-    <h1 class="top-margin d-flex justify-content-center">Order Information</h1>
+  <div class="header-show-order-page" >
+    <h1>Order Information</h1>
   </div>
 
-
-<div class="card-trip">
-  <div class="card-trip-infos">
-    <div>
+<div class="card-order-container">
+  <div class="card-order-infos">
       <% @order.order_products.each do |item|%>
-      <h4> NAME: <%= item.product.name %></h4>
-      <h4> LOCATION: <%= item.product.location %></h4>
-      <h4> DETAILS: <%= item.product.detail %></h4>
-      <h4> QUANTITY: <%= item.quantity %></h4>
-      <h4> TOTAL PRICE: € <%= item.product.price * item.quantity %></h4>
+      <div class="name">
+        <h4> NAME: <%= item.product.name %></h4>
+      </div>
+      <div class="origin">
+        <h4> ORIGIN: <%= item.product.location %></h4>
+      </div>
+      <div class="details">
+        <h4> DETAILS: <%= item.product.detail %></h4>
+      </div>
+      <div class="quantity">
+        <h4> QUANTITY: <%= item.quantity %></h4>
+      </div>
+      <div class="total-price">
+        <h4> TOTAL PRICE: € <%= item.product.price * item.quantity %></h4>
+      </div>
+      <!-- could be better to insert a picture -->
+      <% end %>
+  </div>
+      <%= link_to "Confirm purchase", product_order_path(@order), method: :patch, class: "btn-show-orders-page" %>
+      <% else %>
+        <div>
+          <h4>ORDER CONFIRMED</h4>
+          <hr>
+          <P>BON APPETIT!</P>
+        </div>
       <% end %>
 
-    </div>
-  </div>
-
-  <hr>
-
-  <%= link_to "Confirm purchase", product_order_path(@order), method: :patch, class: "btn btn-flat" %>
-<% else %>
-  <div>
-    <h4>ORDER CONFIRMED</h4>
-    <hr>
-    <P>BON APPETIT!</P>
-  </div>
-<% end %>
-<!-- click the btn - order controller - update action - status change order -
- redirect view show - if else statemnent inside the view (based on status), show the review form
- (COMMENT)
-
-
-    <div class=“col-12 col-sm-6”>
-      <div class=“bg-white rounded p-3">
-        <h5>Add your review</h5>
-        <%#= simple_form_for [@list, @review] do |f| %>
-          <%#= f.input :comment, placeholder: ‘Add your review here...’ %>
-          <%#= f.input :rating, as: :select, collection: (1..5), required: true, prompt: “What’s your rating”, input_html: { id: ‘review_rating’ } %>
-          <%#= f.submit class:‘btn btn-flat’ %>
-        <%# end %>
-      </div>
-    </div>
-  </div>
 </div>
