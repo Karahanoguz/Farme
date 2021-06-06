@@ -1,89 +1,73 @@
+.header-show-page {
+  padding-left: 70px;
+  margin: 30px;
+}
+
+.product-card-container-show-page {
+  display: flex;
+  justify-content: center;
+}
+
 .card {
-  background: #f3e6d5;
-  border-radius: 33px;
-  width: 500px;
-  margin: 0 auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  overflow: hidden;
+  width: 90%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
-.card img{
-  width: 100%;
-}
-.m-container{display:grid;
-  grid-template-columns: 2fr 2fr;
-  grid-gap:16px;
-  margin-left: 67px;
-  margin-top: 40px;
-}
-.card-description{
-  background: #f3e6d5;
-  padding: 15px;
-  border-radius: 33px;
-  width: 500px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
+.container-image-product {
+  display: flex;
+  justify-content: center;
 }
 
-.form-button{
-  background: #f3e6d5;
-  padding: 15px;
-  border-radius: 33px;
-  width: 500px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
-}
-.image-resize {
-  height: 300px;
-  width: 100%;
-}
-.text {
-  padding: 15px;
-}
-.top-margin {
-  top: 20px;
-}
-.flex-edit {
-  align-items: center;
-  img { width: 300px;}
-}
-.card-boat{
-  background: white;
-  padding: 15px;
-  border-radius: 33px;
-  width: 449px;
-  margin: 0 auto;
-}
-.cart {
-  width: 100%;
+.product-image {
+  height: 380px;
+  width: auto;
 }
 
-
-//  button order show page
-
-.btn-ghost {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+.description-product-card-container-show-page {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding-top: 50px;
+  margin-left: 35px;
+  margin-right: 20px;
 }
 
-.btn-ghost:hover {
-  opacity: 1;
+.card-description {
+  border: 1px solid black;
+  padding: 50px;
+  flex-grow: 0.7;
+  margin-right: 100px;
 }
 
-.btn-flat {
-  color: grey;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #abe6c1;
-  transition: background 0.3s ease;
+.reviews {
+    border: 1px solid black;
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 90%;
+    margin-bottom: 50px;
+    padding: 30px;
 }
 
-.btn-flat:hover {
-  background: #1BCB7F;
-  color: white;
+.btn {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.btn:hover {
+    padding: 10px 15px;
+    border-radius: 18px;
+    width: 200px;
+    text-decoration: none;
+    color: white;
 }
