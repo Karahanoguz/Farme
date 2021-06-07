@@ -33,3 +33,26 @@
     color: white;
 }
 
+
+.container-checkout {
+  display: flex;
+  height: 700px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: space-around;
+  object-fit: cover;
+}
+
+.farmer-sketch {
+  background-image: asset-url('farmer_sketch.png');
+  width: 700px;
+  overflow: hidden;
+}
+
+.logo-checkout {
+  background-image: asset-url('hero_bg.jpg');
+}
+
+.congratulation {
+  border: 1px solid black;
+}
