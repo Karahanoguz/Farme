@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   resources :orders, only: [:destroy, :show] do
     resources :reviews, only: [:new, :create]
   end
+  resources :chatrooms, only: :show do
+  resources :messages, only: :create
+  end
   resources :reviews, only: [:destroy]
   resources :users, only: [:index, :show]
 end
