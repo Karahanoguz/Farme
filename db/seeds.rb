@@ -15,10 +15,13 @@ User.destroy_all
 user = User.new(email: 'lalala@gmail.com', password: '2222222')
 user.save!
 
+producer = User.new(email: "producer@gmail.com", password: "3333333", address: "Via Roma, 1185, 47854 Monte Colombo-Montescudo RN, Italia", farmname:"Picodon Cavet", producer: true)
+producer.save!
+
 count = 0
 
 pecorino = URI.open("https://www.alnatura.de/-/media/Alnatura/B2C/Bilder/magazin/warenkunde/Kaesegruppen/Pecorino_2400x1350.jpg?h=810&mw=1440&w=1440&hash=1927D643FC649446533AA1F5486EC1C1")
-product = Product.new(name: "Pecorino", product_category: "cheese", detail: "Pecorino cheeses are hard Italian cheeses made from sheep's milk. The name pecorino derives from pecora which means sheep in Italian.", location: "Via Praga 49, 9000 Roma", price: 15, user_id: user.id)
+product = Product.new(name: "Pecorino", product_category: "cheese", detail: "Pecorino cheeses are hard Italian cheeses made from sheep's milk. The name pecorino derives from pecora which means sheep in Italian.", location: "Via Praga 49, 9000 Roma", price: 15, user_id: producer.id)
 product.photo.attach(io: pecorino, filename: 'nes.png', content_type: 'image/png')
   product.save!
 
@@ -33,7 +36,7 @@ puts "Creating a new product"
     detail: Faker::Food.description,
     location: Faker::Address.country,
     price: rand(10..100),
-    user_id: user.id
+    user_id: producer.id
     )
   product.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   product.save!

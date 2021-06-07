@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   end
   get "start_chat", to: "chatrooms#start_chat", as: :start_chat
   resources :reviews, only: [:destroy]
+  resources :users, only: [:index, :show]
 end
+
+#generate users controller with scope(producer bool), view, read claire scope on slack
