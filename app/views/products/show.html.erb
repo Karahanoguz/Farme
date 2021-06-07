@@ -29,6 +29,9 @@
             <%= f.submit "Add to Cart", class: "btn" %>
 
           <% end %>
+
+          <%= link_to "Chatroom", start_chat_path(user: @product.user) %>
+
       </div>
     </div>
 
