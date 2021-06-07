@@ -6,11 +6,12 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
-    @markers = @products.geocoded.map do |product|
+    @producers = User.where(products: @products)
+    @markers = @producers.geocoded.map do |producer|
       {
-        lat: product.latitude,
-        lng: product.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { product: product })
+        lat: producer.latitude,
+        lng: producer.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { producer: producer })
       }
     end
   end
