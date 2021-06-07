@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   resources :messages, only: :create
   end
   resources :reviews, only: [:destroy]
+  resources :users, only: [:index, :show]
 end
+
+#generate users controller with scope(producer bool), view, read claire scope on slack
