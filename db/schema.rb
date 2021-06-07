@@ -10,6 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2021_06_07_142800) do
+=======
 ActiveRecord::Schema.define(version: 2021_06_07_130844) do
 
 
@@ -41,6 +43,8 @@ ActiveRecord::Schema.define(version: 2021_06_07_130844) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "sender_id"
+    t.integer "receiver_id"
   end
 
   create_table "messages", force: :cascade do |t|
