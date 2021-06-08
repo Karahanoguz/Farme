@@ -1,0 +1,12 @@
+<h1>Your orders</h1>
+
+
+  <% if @orders.first.present? %>
+    <% @orders.each do |order|%>
+      <p><%= order.created_at.localtime.strftime("%b %e") %></p>
+      <p><%= order.status%></p>
+      <p>Your order nr: <%= order.id %></p>
+
+    <%end %>
+  <%end %>
+
