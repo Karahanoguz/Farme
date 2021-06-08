@@ -53,7 +53,9 @@ products.each do |product|
 end
 
 
-
+order = Order.new(user_id: user.id, status: "delivered")
+order.save!
+orderproduct = OrderProduct.create(product_id: products.first.id, quantity: 1, order_id: order.id)
 
 
 

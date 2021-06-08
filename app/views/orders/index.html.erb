@@ -6,7 +6,11 @@
       <p><%= order.created_at.localtime.strftime("%b %e") %></p>
       <p><%= order.status%></p>
       <p>Your order nr: <%= order.id %></p>
-
+      <% if order.status == "delivered" %>
+        <%= link_to "Write a Review", new_order_review_path(order.id), class: "btn-show-orders-page" %>
+      <% end %>
     <%end %>
   <%end %>
+
+  <!-- link button-> form ->create THEN RAISE
 
