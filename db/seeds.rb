@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require "open-uri"
 
 OrderProduct.destroy_all
 Order.destroy_all
@@ -47,15 +48,13 @@ products.each do |product|
     detail: product["gsx$details"]["$t"],
     price: product["gsx$price"]["$t"].to_i,
     product_category: product["gsx$category"]["$t"],
-    user_id: User.find_by(farmname:product["gsx$producersname"]["$t"]).id)
+    user_id: User.find_by(farmname:product["gsx$producersname"]["$t"]).id,
+    picture: product["gsx$picture"]["$t"])
+
+  file = URI.open(product["gsx$picture"]["$t"])
+  product_instance.photo.attach(io: file, filename: "product_#{ product_instance.name }.png", content_type: 'image/png')
+
   product_instance.save!
   puts "product saved :)"
 end
-
-
-
-
-
-
-
 

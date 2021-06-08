@@ -1,3 +1,5 @@
+
+
 <div class="header-show-page">
   <h1 class="">Product Information</h1>
 </div>
@@ -6,6 +8,9 @@
   <div class="card">
   <% if @product.photo.attached? %>
     <div class="container-image-product">
+<%# @product.photos.each do |photo| %>
+  <%#= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<%# end %>
       <%= cl_image_tag @product.photo.key, class: "product-image" %>
     </div>
 </div>
