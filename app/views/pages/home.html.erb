@@ -1,4 +1,4 @@
-<div class="container-hero">
+<div class="container-hero" id="homepage">
   <div class="flex-hero">
     <div class="cta">
       <div class="flex-direction-row">
@@ -22,29 +22,31 @@
           </div>
         </div>
         <div class="flex-basis-fifty">
-
+          <div class="abs-pos-margin">
+            <div class="main-container-index">
+              <div class="grid-card-products">
+                <% @users.each_slice(2).with_index do |userpair, index| %>
+                  <div class="row <%= index.odd? ? 'justify-content-start right-margin' : 'justify-content-end left-margin' %>">
+                    <% userpair.each do |producer| %>
+                    <div class="index-card-products slight-right-margin">
+                      <%= cl_image_tag producer.picture, class: "products-image"%>
+                      <div class="product-card-content">
+                        <h4 class="product-card-name"> <%= link_to producer.farmname, user_path(producer), {:style=>'color:#000; text-decoration: none'} %>
+                        </h4>
+                        <div class="products-card-detail">
+                          <p> <%= producer.origin %></p>
+                        </div>
+                         <p class="pricing-card-products"> <%= producer.address %></p>
+                      </div>
+                    </div>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- <div class="container-info">
-  <div class="flex-card">
-    <div class="card-area">
-      <%#= image_tag "icon_area.png", class:"area" %>
-      <h2>Find your area</h2>
-    </div>
-
-    <div class="card-area">
-      <%#= image_tag "icon_products.png", class:"area" %>
-      <h2>Choose your product</h2>
-    </div>
-
-    <div class="card-area">
-      <%#= image_tag "icon_door.png", class:"area" %>
-      <h2>Open your door</h2>
-    </div>
-
-  </div>
-</div> -->

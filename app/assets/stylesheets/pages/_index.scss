@@ -1,8 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show_producers";
-
-// Cards.
+@import "show_products";
 
 .products-image {
   min-height: 120px;
@@ -10,11 +9,8 @@
   object-fit: cover;
   padding: 12px;
   border-radius: 20px;
-
 }
 
-
-// Flex box.
 
 .main-container-index {
   display: flex;
@@ -86,9 +82,8 @@ h4.product-card-name {
   color: #252525;
 }
 
-h3.pricing-card-products  {
+h3.pricing-card-products {
   font-size: 16px;
-  font-weight: bold;
   margin: 0;
 }
 

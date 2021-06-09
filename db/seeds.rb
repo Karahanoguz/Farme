@@ -32,6 +32,7 @@ producers.each do |producer|
     category: producer["gsx$category"]["$t"],
     website: producer["gsx$websitecontact"]["$t"],
     details: producer["gsx$details"]["$t"],
+    picture: producer["gsx$profilepicture"]["$t"],
     producer: true)
   producer_instance.save!
   puts "producer saved :)"

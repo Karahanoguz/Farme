@@ -10,27 +10,24 @@
         <% @products.each do |product|%>
           <div class="index-card-products">
             <div class="product-card-content">
-            <%if product.photo.attached? %>
-              <%= cl_image_tag product.photo.key, class: "products-image"%>
-            <% end %>
+              <%if product.photo.attached? %>
+                <%= cl_image_tag product.photo.key, class: "products-image"%>
+              <% end %>
 
               <div class="product-card-infos">
                 <h4 class="product-card-name"> <%= product.name %><%= link_to "More infos", product_path(product), class: "product-link"%></h4>
-
                   <div class="products-card-detail">
                     <p> <%= product.detail %></p>
                   </div>
-                </div>
+              </div>
             </div>
-              <h3 class="pricing-card-products"><%= product.price %> € unit</h3>
+              <h3 class="pricing-card-products">€ <%= product.price %> / unit</h3>
           </div>
 
-        <% end %>
+          <% end %>
       <% else %>
         <h4>Sorry, we don't have this product 😔</h4>
       <% end %>
-
-
 
     </div>
       <div id="map" style="width: 40%; height: 100vh;"
