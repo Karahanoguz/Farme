@@ -1,10 +1,11 @@
-.show-producer-page-container {
+.product-show-page {
   display: grid;
 }
 
 .column-producer {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-gap: 16px;
 }
 
 .products-image {
