@@ -1,3 +1,17 @@
+.cart-page-grafic {
+  height: 463px;
+  padding: 20px;
+}
+
+.container-cart {
+  background-image: asset-url('hero_bg.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
 .header-show-order-page {
   text-align: center;
   margin-top: 30px;
@@ -5,31 +19,143 @@
   padding: 20px;
 }
 
-.card-order-infos {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 30px;
-  padding: 20px;
-  text-align: center;
-  align-items: flex-start;
-  justify-content: space-between;
-}
 
 .btn-show-orders-page {
-    border: 1px solid black;
-    background-color: black;
+    background-color: #F3B88A;
     color: white;
-    padding: 10px 15px;
+    padding: 8px;
     border-radius: 8px;
     width: 200px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-left: 31%;
+    position: absolute;
+    margin-left: 7%;
 }
 
 .btn-show-orders-page:hover {
     padding: 10px 15px;
-    border-radius: 18px;
+    border-radius: 14px;
     width: 200px;
     text-decoration: none;
     color: white;
 }
 
+.first-div {
+    border-radius: 8px;
+    border: #F3B88A 1px solid;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    font-family: Roboto;
+    font-style: bold;
+}
+
+.total-amount {
+  font-size: 19px;
+  left: 136px;
+  top: 164px;
+  font-family: Roboto;
+  font-style: normal;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  padding: 5px;
+}
+
+.cart-name {
+  font-size: 12px;
+    left: 136px;
+    top: 164px;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 16px;
+    display: flex;
+    color: #000000;
+}
+
+.cart-price {
+  font-size: 12px;
+    left: 136px;
+    top: 164px;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 16px;
+    display: flex;
+    color: #000000;
+}
+
+.cart-quantity {
+  font-size: 12px;
+    left: 136px;
+    top: 164px;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 16px;
+    display: flex;
+    color: #000000;
+}
+
+.cart-total {
+  font-size: 12px;
+    left: 136px;
+    top: 164px;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 16px;
+    display: flex;
+    color: #000000;
+}
+
+.lalaland {
+  border-radius: 8px;
+  width: 400px;
+  border: #F3B88A 1px solid;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 315px;
+  font-family: Roboto;
+  position: absolute;
+  margin-left: 37%;
+  margin-top: 5%;
+}
+
+.title-order-confirmed {
+  height: 49px;
+  left: 255px;
+  top: 228px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  color: #252525;
+  padding-left: 18px;
+}
+
+.title-confirmation {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-family: Roboto;
+}
+
+.title-bonappetit {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-family: Roboto;
+}
+
+.order-confirmation-text {
+
+}
