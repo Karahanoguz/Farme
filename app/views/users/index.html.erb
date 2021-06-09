@@ -1,5 +1,37 @@
 <div>
   <% @users.each do |producer| %>
-    <p><%= producer.email %></p>
+
   <% end %>
+</div>
+
+<h1 class="index-page-title">CURRENT SEARCH</h1>
+
+  <div class="main-container-producer">
+    <div class="grid-card-producer">
+      <% if @users.first.present? %>
+        <% @users.each do |producer|%>
+          <div class="index-card-producer">
+
+              <div class="producer-card-content">
+              <h4 class="producer-card-name"><%= producer.farmname %>
+              </h4>
+
+                <div class="producer-card-detail">
+                  <p> <%= producer.address %></p>
+                </div>
+            </div>
+          </div>
+
+        <% end %>
+      <% else %>
+        <h4>Sorry, this producer doesn't exit 😔</h4>
+      <% end %>
+
+
+
+    </div>
+      <div id="map" style="width: 40%; height: 100vh;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
 </div>

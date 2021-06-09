@@ -1,0 +1,80 @@
+@import "home";
+
+// Cards.
+
+.products-image {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  padding: 12px;
+  border-radius: 20px;
+}
+
+
+// Flex box.
+
+.main-container-producer {
+  display: flex;
+  padding: 15px;
+}
+
+.grid-card-producer {
+ flex-grow: 1;
+ width: 60%;
+}
+
+.index-card-producer {
+  display: flex;
+  flex-grow: 1;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 97%;
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  margin-bottom: 20px;
+  border: 1px solid #F3B88A;
+}
+
+.card-link {
+  text-decoration: none !important;
+}
+
+.producer-card-name h4 {
+  font-size: 8px;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px;
+}
+
+pricing-card-products h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.producer-card-detail p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  width: 207px;
+  position: absolute;
+}
+
+.producer-card-content .index-card-producer {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+
+// Map.
+
+#map {
+  position: sticky;
+  top: 0;
+}
