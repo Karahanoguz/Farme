@@ -40,14 +40,22 @@
   text-decoration: none !important;
 }
 
-.producer-card-name h4 {
-  font-size: 8px;
+h4.producer-card-name  {
+  height: 49px;
+  left: 255px;
+  top: 228px;
+  font-style: normal;
   font-weight: bold;
-  margin: 0;
-  padding: 20px;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  padding-left: 20px;
+  color: #252525;
 }
 
-pricing-card-products h3 {
+h3.pricing-card-products  {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
@@ -61,6 +69,7 @@ pricing-card-products h3 {
   margin-top: 8px;
   width: 207px;
   position: absolute;
+  padding-left: 20px;
 }
 
 .producer-card-content .index-card-producer {
