@@ -1,11 +1,3 @@
-<div class="search-bar-container">
-  <div class="search-bar-input">
-    <%= simple_form_for :search, html: { class: "flexsearch"}, url: products_path, method: :get do |f| %>
-    <%= f.input :query, label: false, placeholder: "Find a product" %>
-    <%= f.submit "Search" %>
-    <% end %>
-  </div>
-</div>
 
 <h1>Your results</h1>
 
