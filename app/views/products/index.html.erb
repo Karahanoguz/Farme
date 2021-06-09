@@ -7,36 +7,37 @@
   </div>
 </div>
 
-<h1>Your results</h1>
 
-<div class="container-card-products">
-  <div class="grid-card-products">
-    <div class="copy-card-products">
-
+<h1>CURRENT SEARCH</h1>
+  <div class="main-container-index">
+    <div class="grid-card-products">
       <% if @products.first.present? %>
-      <% @products.each do |product|%>
-        <%if product.photo.attached? %>
-        <%= cl_image_tag product.photo.key, class: "products-image"%> 
-        <%end %>
+        <% @products.each do |product|%>
+          <div class="index-card-products">
+            <%if product.photo.attached? %>
+              <%= cl_image_tag product.photo.key, class: "products-image"%>
+            <% end %>
 
-      <div>
+              <div class="product-card-content">
+              <h2 class="product-card-name"> <%= link_to product.name, product_path(product), {:style=>'color:#000; text-decoration: none'} %>
+              </h2>
+                <div class="products-card-detail">
+                  <p> <%= product.detail %></p>
+                </div>
+              <h3 class="pricing-card-products">€ <%= product.price %></h3>
+            </div>
+          </div>
 
-      <%= link_to product.name, product_path(product), {:style=>'color:#000; text-decoration: none'} %>
-        <div class="products-card-detail">
-          <p> <%= product.detail %></p>
-        </div>
-      </div>
-        <h2 class="pricing-card-products">€ <%= product.price %></h2>
-
-    <% end %>
+        <% end %>
       <% else %>
-        <h3>Sorry, we don't have this product 😔</h3>
+        <h4>Sorry, we don't have this product 😔</h4>
       <% end %>
 
-      </div>
-    <div id="map"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
+
     </div>
-  </div>
+      <div id="map" style="width: 40%; height: 100vh;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
 </div>
