@@ -32,18 +32,6 @@
       </tbody>
     </table>
 
-  <tbody>
-   <% @order.order_products.each do |item|%>
-    <tr>
-      <th scope="row"><h6><%= item.product.name %></h6> </th>
-      <td><h6><%= item.product.price %>€</h6></td>
-      <td><h6><%= item.quantity %></h6></td>
-      <td><h6><%= item.product.price*item.quantity %>€</h6></td>
-    </tr>
-    <%end%>
-
-  </tbody>
-</table>
       </div>
 
       <hr size=2 noshade>
