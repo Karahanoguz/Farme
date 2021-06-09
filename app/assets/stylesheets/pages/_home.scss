@@ -1,15 +1,15 @@
 /* --- Fonts style --- */
 
 h1, h2 {
-  font-family: 'Pacifico', cursive;
+  font-family: $headers-font;
 }
 
 h3, h4, p, a {
-  font-family: 'Oswald', sans-serif;
+  font-family: $body-font;
 }
 
 body {
-  background-color: #F3E6D5;
+  background-color: #ffff;
 }
 
 /* --- CTA --- */
