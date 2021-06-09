@@ -5,5 +5,35 @@
 .column-producer {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 16px;
+}
+
+.products-image {
+  height: 250px;
+}
+
+.header-link {
+  margin-top: 30px;
+}
+
+.row {
+  margin-top: 40px;
+}
+
+.body-producer-show-page {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.show-producer-page-main #map {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.image-producer-show1 {
+  margin-bottom: 10px;
+}
+
+.image-producer-show2 {
+  margin-bottom: 10px;
+  margin-left: 5px;
 }
