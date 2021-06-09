@@ -1,37 +1,64 @@
-<% if @order.status.nil? %>
 
-  <div class="header-show-order-page" >
-    <h1>Order Information</h1>
-  </div>
+<div class="d-flex justify-content-center">
 
-<div class="card-order-container">
-  <div class="card-order-infos">
-      <% @order.order_products.each do |item|%>
-      <div class="name">
-        <h4> NAME: <%= item.product.name %></h4>
-      </div>
-      <div class="origin">
-        <h4> ORIGIN: <%= item.product.location %></h4>
-      </div>
-      <div class="details">
-        <h4> DETAILS: <%= item.product.detail %></h4>
-      </div>
-      <div class="quantity">
-        <h4> QUANTITY: <%= item.quantity %></h4>
-      </div>
-      <div class="total-price">
-        <h4> TOTAL PRICE: € <%= item.product.price * item.quantity %></h4>
-      </div>
-      <!-- could be better to insert a picture -->
-      <% end %>
-  </div>
-      <%= link_to "Confirm purchase", product_order_path(@order), method: :patch, class: "btn-show-orders-page" %>
-      <% else %>
-        <div>
-          <h4>ORDER CONFIRMED</h4>
-          <hr>
-          <P>BON APPETIT!</P>
-        </div>
-      <% end %>
+<%=image_tag('farmer_vector.png', class:"mt-4 mr-3", width:"340px") %>
+  <% if @order.status.nil? %>
+    <div class="first-div mt-4 ml-5">
+     <div class="d-flex flex-column justify-content-around height">
+     <h1 class="top-margin d-flex justify-content-center my-4">Order Summary</h1>
+    </div>
 
-</div>
+      <div class="d-flex flex-column bd-highlight  orders-container"> 
+      
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% @order.order_products.each do |item|%>
+    <tr>
+      <th scope="row"><h6><%= item.product.name %></h6> </th>
+      <td><h6><%= item.product.price %>€</h6></td>
+      <td><h6><%= item.quantity %></h6></td>
+      <td><h6><%= item.product.price*item.quantity %>€</h6></td>
+    </tr>
+    <%end%>
+   
+  </tbody>
+</table>
+       
+        
+      </div>
+      <hr size=2 noshade>
+
+  
+      <div class="d-flex justify-content-center"> 
+
+       <% amount=0%>
+       <% @order.order_products.each do |item|%>
+         <% amount+= item.product.price*item.quantity %>
+      <%end%>
+      <h4> Total Amount <%= amount%> </h4>
+
+      </div>
+
+      <div class="d-flex justify-content-center">
+       <%= link_to "Confirm purchase", product_order_path(@order), method: :patch, class: "btn-show-orders-page" %>
+        <% else %>
+          <div>
+           <h4>ORDER CONFIRMED</h4>
+           <hr>
+           <P>BON APPETIT!</P>
+          </div>
+        <% end %>
+      </div>
+    
+
+    </div>
+    </div>
+
