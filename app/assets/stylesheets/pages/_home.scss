@@ -118,6 +118,7 @@ body {
 .flex-basis-fifty {
   display: flex;
   flex-basis: 50%;
+  position: relative;
 }
 
 .left-section {
@@ -144,10 +145,27 @@ body {
   margin-left: 80px;
 }
 
+#homepage .left-margin {
+  margin-left: 275px;
+}
+
+.right-margin {
+  margin-right: 80px;
+}
+
 #homepage .index-card-products {
   width: 40%;
 }
 
+.slight-right-margin {
+  margin-right: 15px;
+}
+
+.abs-pos-margin {
+  position: absolute;
+  margin-left: 40px;
+  overflow: hidden;
+}
 .lalaland{
   border: black solid 3px;
   border-radius: 8px;
