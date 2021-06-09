@@ -16,7 +16,7 @@
       <% if @products.first.present? %>
       <% @products.each do |product|%>
         <%if product.photo.attached? %>
-          <%= cl_image_tag product.photo.key, class: "products-image"%>
+        <%= cl_image_tag product.photo.key, class: "products-image"%> 
         <%end %>
 
       <div>
