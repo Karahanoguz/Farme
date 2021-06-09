@@ -9,7 +9,6 @@
     </div>
 
       <div class="d-flex flex-column bd-highlight  orders-container"> 
-      
       <table class="table">
   <thead>
     <tr>
@@ -31,9 +30,8 @@
    
   </tbody>
 </table>
-       
-        
       </div>
+
       <hr size=2 noshade>
 
   
@@ -43,17 +41,18 @@
        <% @order.order_products.each do |item|%>
          <% amount+= item.product.price*item.quantity %>
       <%end%>
-      <h4> Total Amount <%= amount%> </h4>
+      <h4> Total Amount <%= amount%>€</h4>
 
       </div>
 
       <div class="d-flex justify-content-center">
        <%= link_to "Confirm purchase", product_order_path(@order), method: :patch, class: "btn-show-orders-page" %>
         <% else %>
-          <div>
-           <h4>ORDER CONFIRMED</h4>
-           <hr>
-           <P>BON APPETIT!</P>
+          <div class=" lalaland ">
+           <h4 class="top-margin d-flex justify-content-center my-4" >ORDER CONFIRMED</h4>
+           <hr size=2 noshade>
+           <h6 class="d-flex justify-content-center my-3 mt-4 ml-5"> Congratulations your purchase was successful, check your email for more information.</h6>
+           <h5 class="mt-4 ml-5">BON APPETIT!</h5>
           </div>
         <% end %>
       </div>
