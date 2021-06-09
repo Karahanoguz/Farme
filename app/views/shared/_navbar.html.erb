@@ -1,28 +1,33 @@
-<!--Navbar-->
-    <nav id="navbar-complete" class="navbar navbar-light amber lighten-4">
+<nav class="navbar navbar-expand-lg navbar-light  navbar-design">
+  <a class="navbar-brand" href="/"><%= image_tag "logo.png", class:"area", hight:"20px", width:"100px"%></a>
+ 
 
-      <!-- Navbar brand -->
-      <a class="navbar-brand" href="/"><%= image_tag "logo.png", class:"area" %></a>
-      <!-- Collapse button -->
-      <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
-        aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
-        <div class="animated-icon1"><span></span><span></span><span></span></div>
-      </button>
-
-      <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent20">
-
-        <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Farmer <span class="sr-only">(current)</span></a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+              <a class="nav-link" href="/users">Farmer <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/products">Products</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sign in</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
+            
+          </li>
+    </ul>
+    
+        <% unless  params[:action]=="home" %>
+          <%= simple_form_for :search, html: { class: "flexsearch"}, url: products_path, method: :get do |f| %>
+          <%= f.input :query, label: false, placeholder: "Find a product" %>
+          <%= button_tag type: 'submit',class: "searchicon" do %>
+          <i class="fas fa-search"></i>
+          <% end %>
+
+          <% end %>
+        <% end %>
+        
+      
+  </div>
+</nav>
+
+
+
+          
