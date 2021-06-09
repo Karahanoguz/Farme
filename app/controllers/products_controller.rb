@@ -21,4 +21,8 @@ class ProductsController < ApplicationController
     @order_product = OrderProduct.new
     @review = Review.new
   end
+
+  # def product_params
+  #   params.require(:article).permit(:title, :body, photos: [])
+  # end
 end
