@@ -10,20 +10,15 @@
             <li class="nav-item">
               <a class="nav-link" href="/products">Products</a>
             </li>
-
-          </li>
     </ul>
 
         <% unless  params[:action]=="home" %>
           <%= simple_form_for :search, html: { class: "flexsearch"}, url: products_path, method: :get do |f| %>
+
           <%= f.input :query, label: false, placeholder: "Find a product" %>
-          <%= button_tag type: 'submit',class: "searchicon" do %>
-          <i class="fas fa-search"></i>
-          <% end %>
-
-          <% end %>
+            <%= button_tag type: 'submit',class: "searchicon" do %>
+            <i class="fas fa-search"></i>
+            <% end %>
         <% end %>
-
-
   </div>
 </nav>

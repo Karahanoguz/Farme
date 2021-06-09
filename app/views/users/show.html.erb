@@ -6,7 +6,7 @@
           <h6 class="header-link"><%= link_to "Go back to producers list", users_path(@user), {:style=>'color:#000; text-decoration: none'} %></h6>
   <div class="row">
     <div class="col-12 col-lg-8">
-      <div class="column-product">
+      <div class="column-show-product">
         <div class="link-producer-list">
           <%= image_tag "farmer_land.png", class:"image-producer-show" %>
         </div>
@@ -33,21 +33,23 @@
     <div class="col-12 col-lg-4">
       <div class="producer">
         <div class="container-first-item">
-          <%= image_tag "farmer_face.png", class:"image-producer-show" %>
+          <%= cl_image_tag @user.picture, class: "image-profile-producer-show"%>
           <h6><%= @user.farmname.capitalize  %></h6>
-          <p>Throw down all the stuff in the kitchen eat half my food and ask for more tweeting a baseball yet has closed eyes but still sees you.</p>
-            <%= image_tag "farmer.png", class:"image-producer-show" %>
+          <p><%= @user.address %></p>
+          <p><%= @user.website %></p>
+            <%= image_tag "farmer.png", class:"image-producer-show-sketch" %>
         </div>
 
         <div class="container-second-item">
           <% @user.products.each do |product|%>
           <%= cl_image_tag product.photo.key, class: "products-image"%>
-          <div>
             <%= product.name %>
             <%= product.detail %>
+        </div>
+          <div>
+            <%= link_to "See our product", product_path(product), method: :get, class: "btn-show-orders-page" %>
           </div>
           <%end %>
-        </div>
       </div>
     </div>
   </div>
