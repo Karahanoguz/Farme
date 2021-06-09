@@ -1,0 +1,9 @@
+.show-producer-page-container {
+  display: grid;
+}
+
+.column-producer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 16px;
+}
