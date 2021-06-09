@@ -4,22 +4,21 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/users">Farmer <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/products">Products</a>
-      </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="/users">Farmers <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products">Products</a>
+            </li>
     </ul>
-    
-      <% unless  params[:action]=="home" %>
-        <%= simple_form_for :search, html: { class: "flexsearch"}, url: products_path, method: :get do |f| %>
+
+        <% unless  params[:action]=="home" %>
+          <%= simple_form_for :search, html: { class: "flexsearch"}, url: products_path, method: :get do |f| %>
+
           <%= f.input :query, label: false, placeholder: "Find a product" %>
             <%= button_tag type: 'submit',class: "searchicon" do %>
             <i class="fas fa-search"></i>
             <% end %>
-
         <% end %>
-      <% end %>
   </div>
 </nav>
