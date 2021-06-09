@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@700&family=Roboto:wght@300;400;500;700&family=Work+Sans&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Oswald", "Helvetica", "sans-serif";
-$headers-font: "Pacifico", "Helvetica", "sans-serif";
+$body-font: "Roboto", "sans-serif", "Helvetica", "sans-serif";
+$body-font-support: "Work Sans", "sans-serif", "Helvetica", "sans-serif";
+$headers-font: "BioRhyme", "serif", "Helvetica", "sans-serif";
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
