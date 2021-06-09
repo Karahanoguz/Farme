@@ -8,6 +8,7 @@
 require 'faker'
 require "open-uri"
 
+Review.destroy_all
 OrderProduct.destroy_all
 Order.destroy_all
 Product.destroy_all
@@ -30,6 +31,7 @@ producers.each do |producer|
     origin: producer["gsx$origin"]["$t"],
     category: producer["gsx$category"]["$t"],
     website: producer["gsx$websitecontact"]["$t"],
+    details: producer["gsx$details"]["$t"],
     producer: true)
   producer_instance.save!
   puts "producer saved :)"
