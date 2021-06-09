@@ -44,14 +44,20 @@ body {
 
 /* --- Search bar --- */
 
-.flexsearch {
+.left-section .flexsearch {
   width: 80%;
+}
+
+.flexsearch {
+  display: flex;
 }
 
 .searchbar {
   //justify-content: space-between;
   display: flex;
   flex-direction: row;
+  //flex-grow: 1 !important;
+  width: 100%;
 }
 
 .search-bar-input {
@@ -75,7 +81,7 @@ body {
   border-radius: 10px;
 }
 
-.search_query {
+.left-section .search_query {
   flex-grow: 1 !important;
 }
 
@@ -137,11 +143,15 @@ body {
 .left-margin {
   margin-left: 80px;
 }
+
+#homepage .index-card-products {
+  width: 40%;
+}
+
 .lalaland{
   border: black solid 3px;
   border-radius: 8px;
   width: 400px;
-  
 }
 // .typewriter {
 
