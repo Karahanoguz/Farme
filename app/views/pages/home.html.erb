@@ -3,16 +3,20 @@
     <div class="cta">
       <div class="flex-direction-row">
         <div class="flex-basis-fifty">
-          <%= image_tag "logo.png", class:"logo-size" %>
-          <div class="left-section">
-            <h1>Meet the farmers around you!</h1>
-            <p>Tell us where you are and we will introduce you to the amazing food producers around you</p>
-            <div class="search-bar-container">
-              <div class="search-bar-input">
-                <%= simple_form_for :search, html: { class: "flexsearch"}, url: products_path, method: :get do |f| %>
-                <%= f.input :query, label: false, placeholder: "Find a product" %>
-                <%= f.submit "Search" %>
-                <% end %>
+          <div class="flex-direction-column top-margin left-margin">
+            <div class="logo-position">
+              <%= image_tag "logo.png", class:"logo-size" %>
+            </div>
+            <div class="left-section">
+              <h1>Meet the farmers around you!</h1>
+              <p>Tell us where you are and we will introduce you to the amazing food producers around you</p>
+              <div class="search-bar-container">
+                <div class="search-bar-input">
+                  <%= simple_form_for :search, html: { class: "flexsearch"}, url: products_path, method: :get do |f| %>
+                  <%= f.input :query, label: false, placeholder: "Find a product" %>
+                  <%= f.submit "Search" %>
+                  <% end %>
+                </div>
               </div>
             </div>
           </div>
