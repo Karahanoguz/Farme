@@ -1,8 +1,12 @@
-
+h2.info-window-title {
+  font-size: 15px;
+}
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto;
+  border-radius: 10px;
+  width: 158px;
 }
 
 .main-container {
