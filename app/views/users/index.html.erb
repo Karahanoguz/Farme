@@ -13,8 +13,7 @@
           <div class="index-card-producer">
 
               <div class="producer-card-content">
-              <h4 class="producer-card-name"><%= producer.farmname %>
-              </h4>
+              <h4 class="producer-card-name"><%= producer.farmname %><%= link_to "More infos", user_path(producer), class: "product-link"%></h4>
 
                 <div class="producer-card-detail">
                   <p> <%= producer.address %></p>

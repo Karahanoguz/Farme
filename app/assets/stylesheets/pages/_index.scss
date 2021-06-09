@@ -46,20 +46,29 @@
 }
 
 h1.index-page-title {
-width: 120px;
-height: 16px;
-left: 136px;
-top: 164px;
+  left: 136px;
+  top: 164px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  padding-left: 27px;
+}
 
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 14px;
-line-height: 16px;
-display: flex;
-align-items: center;
-
-color: #000000;
+.current-search-title {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Roboto;
+  background-color: #F3B88A;
+  color: white;
+  margin-left: 12px;
+  padding: 4px;
+  border-radius: 4px;
+  text-transform: uppercase;
 }
 
 h4.product-card-name {
