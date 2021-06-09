@@ -2,7 +2,7 @@ class Product < ApplicationRecord
   has_many :order_products
   has_many :orders, through: :order_products
   has_many :reviews, through: :orders
-
+  #has_many_attached :photos
 
   belongs_to :user
 
