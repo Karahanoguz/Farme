@@ -22,25 +22,27 @@
           </div>
         </div>
         <div class="flex-basis-fifty">
-          <div class="main-container-index">
-            <div class="grid-card-products">
-              <% @users.each_slice(2).with_index do |userpair, index| %>
-                <div class="row <%= index.odd? ? 'justify-content-start' : 'justify-content-end' %>">
-                  <% userpair.each do |producer| %>
-                  <div class="index-card-products col-4">
-                    <%= cl_image_tag producer.picture, class: "products-image"%>
-                    <div class="product-card-content">
-                      <h4 class="product-card-name"> <%= link_to producer.farmname, user_path(producer), {:style=>'color:#000; text-decoration: none'} %>
-                      </h4>
-                      <div class="products-card-detail">
-                        <p> <%= producer.origin %></p>
+          <div class="abs-pos-margin">
+            <div class="main-container-index">
+              <div class="grid-card-products">
+                <% @users.each_slice(2).with_index do |userpair, index| %>
+                  <div class="row <%= index.odd? ? 'justify-content-start right-margin' : 'justify-content-end left-margin' %>">
+                    <% userpair.each do |producer| %>
+                    <div class="index-card-products slight-right-margin">
+                      <%= cl_image_tag producer.picture, class: "products-image"%>
+                      <div class="product-card-content">
+                        <h4 class="product-card-name"> <%= link_to producer.farmname, user_path(producer), {:style=>'color:#000; text-decoration: none'} %>
+                        </h4>
+                        <div class="products-card-detail">
+                          <p> <%= producer.origin %></p>
+                        </div>
+                         <p class="pricing-card-products"> <%= producer.address %></p>
                       </div>
-                       <p class="pricing-card-products"> <%= producer.address %></p>
                     </div>
+                    <% end %>
                   </div>
-                  <% end %>
-                </div>
-              <% end %>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>

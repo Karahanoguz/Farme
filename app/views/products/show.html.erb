@@ -1,58 +1,42 @@
+<h6 class="header-link"><%= link_to "Go back to products list", products_path(@user), {:style=>'color:#000; text-decoration: none'} %></h6>
 
+<div class="show-product-page-main container">
 
-<div class="header-show-page">
-  <h1 class="">Product Information</h1>
-</div>
-
-<div class="product-card-container-show-page">
-  <div class="card">
-  <% if @product.photo.attached? %>
-    <div class="container-image-product">
-<%# @product.photos.each do |photo| %>
-  <%#= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<%# end %>
+  <div class="container a">
+    <div class="link-producer-list">
       <%= cl_image_tag @product.photo.key, class: "product-image" %>
     </div>
-</div>
-  <% end %>
-</div>
+    <div class="copy-body">
+      <h4> <%= @product.name %> </h4>
+      <p> <%= @product.location %> </p>
+      <p> <%= @product.detail %> </p>
+      <p> <%= @product.price %> € </p>
+    </div>
+  </div>
 
-    <div class="description-product-card-container-show-page">
-      <div class="card-description">
-        <p> NAME: <%= @product.name %></h4>
-        <p> CATEGORY: <%= @product.product_category %> </h4>
-        <p> ORIGIN: <%= @product.location %> </h4>
-        <p> DETAILS: <%= @product.detail %> </h4>
-        <p> PRICE: € <%= @product.price %> </h4>
-      </div>
+
+  <div class="container b">
+
+    <div class="container c">
+      <%= cl_image_tag @product.photo.key, class: "image-show-page-product" %>
+      <p> <%= @product.price %> € </p>
       <div class="form-">
         <div class="form-input">
           <%= simple_form_for [ @product, @order_product ] do |f| %>
             <%= f.input :quantity %>
             <%= f.submit "Add to Cart", class: "form-btn btn" %>
           <% end %>
-
-          <%= link_to "Chat", start_chat_path(user: @product.user), class: "form-btn btn" %>
         </div>
       </div>
     </div>
 
-<div class="reviews">
-  <h3>Reviews</h3>
-    <% if @product.reviews.empty? %>
-      <small><em>Be the first one to review these products.</em></small>
-    <% end %>
-      <% @product.reviews.each do |review| %>
-      <div>
-        <% review.rating.times do %>
-        <% end %>
-          <div class="reviews">
-            <p class="reviews-time">
-              <%= distance_of_time_in_words_to_now(review.created_at) %> ago
-            </p>
-            <p class="reviews-content"><%= review.content %></p>
-          </div>
-      </div>
-  <% end %>
+    <div class="container d">
+      <h4>Producer</h4>
+
+      <p>lorem</p>
+    </div>
+
+  </div>
 </div>
+
 
