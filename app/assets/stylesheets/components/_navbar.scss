@@ -1,18 +1,52 @@
 .navbar-design{
-  background-color: white;
-
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
-
+.navbar-brand {
+  margin-left: 100px;
+  margin-top: 30px;
+}
 
 .navbar-brand > img {
   width: auto;
   height: 35px;
 }
+
+#navbarSupportedContent {
+  display: contents;
+}
+
+.navbar-nav {
+    display: contents;
+}
+
+.nav-item {
+  padding-top: 40px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.simple_form {
+  display: flex;
+  margin-top: 40px;
+  margin-right: 100px;
+}
+
 .searchicon{
   color: white;
   background-color: black;
- height: 36px;
- border-radius: 5px;
- width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  width: 36px;
 }
