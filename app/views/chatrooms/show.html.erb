@@ -1,13 +1,20 @@
-<h1><%= Chatroom %></h1>
+<div class="chat-main-container">
+  <div class="chat-form-container">
 
-<div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+    <h1 class="chat-header"><%= Chatroom %> 👩🏼‍🌾</h1>
 
-  <% @chatroom.messages.each do |message| %>
-    <%= render 'messages/message', message: message %>
-  <% end %>
+    <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+
+      <% @chatroom.messages.each do |message| %>
+        <%= render 'messages/message', message: message %>
+      <% end %>
+    </div>
+
+    <div class="chat-message-bar">
+    <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+      <%= f.input :content, label: false, placeholder: "Type your message here..." %>
+      <%= f.submit class: "btn-chat-page"%>
+    <% end %>
+    </div>
+  </div>
 </div>
-
-<%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-  <%= f.input :content, label: false, placeholder: "Type your message here" %>
-  <%= f.submit %>
-<% end %>
