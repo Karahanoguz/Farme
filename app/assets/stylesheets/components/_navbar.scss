@@ -1,11 +1,11 @@
 .navbar-design{
   display: flex;
   justify-content: space-between;
+  padding: 0 20px;
   margin-bottom: 30px;
 }
 
 .navbar-brand {
-  margin-left: 100px;
   margin-top: 30px;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .nav-item {
-  padding-top: 40px;
+  padding: 25px 25px 0 0;
 }
 
 .nav-link {
@@ -40,7 +40,6 @@
 .simple_form-search {
   display: flex;
   margin-top: 40px;
-  margin-right: 100px;
 }
 
 .searchicon{
@@ -49,4 +48,9 @@
   height: 36px;
   border-radius: 5px;
   width: 36px;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
 }
