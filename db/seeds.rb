@@ -52,7 +52,11 @@ products.each do |product|
     price: product["gsx$price"]["$t"].to_i,
     product_category: product["gsx$category"]["$t"],
     user_id: User.find_by(farmname:product["gsx$producersname"]["$t"]).id,
-    picture: product["gsx$picture"]["$t"])
+    picture: product["gsx$picture"]["$t"],
+    picture_one: product["gsx$pictureone"]["$t"],
+    picture_two: product["gsx$picturetwo"]["$t"],
+    picture_three: product["gsx$picturethree"]["$t"],
+    picture_four: product["gsx$picturefour"]["$t"])
 
   file = URI.open(product["gsx$picture"]["$t"])
   product_instance.photo.attach(io: file, filename: "product_#{ product_instance.name }.png", content_type: 'image/png')

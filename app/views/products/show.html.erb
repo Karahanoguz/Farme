@@ -18,7 +18,7 @@
   <div class="container b">
 
     <div class="container c">
-      <%= cl_image_tag @product.photo.key, class: "image-show-page-product" %>
+      <%= cl_image_tag @product.picture, class: "image-show-page-product" %>
       <p> <%= @product.price %> € </p>
       <div class="form-">
         <div class="form-input">
@@ -32,9 +32,21 @@
 
     <div class="container d">
       <h4>Producer</h4>
+        <div class="copy-body">
+          <%= cl_image_tag @user.picture, class: "image-profile-producer-show"%>
+          <h4> <%= @user.farmname %> </h4>
+          <p> <%= @user.details %> </p>
+        </div>
 
-      <p><%= link_to "Chat", start_chat_path(user: @product.user), class: "form-btn btn" %></p>
     </div>
+      <div class="chat-product-page">
+        <p><%= link_to "Chat", start_chat_path(user: @product.user), class: "form-btn btn" %></p>
+      </div>
+
+    <div class="review-show-product-page">
+      <h4>Reviews</h4>
+    </div>
+
 
   </div>
 </div>

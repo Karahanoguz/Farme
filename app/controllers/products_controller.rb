@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @order_product = OrderProduct.new
     @review = Review.new
+    @user = @product.user
   end
 
   # def product_params

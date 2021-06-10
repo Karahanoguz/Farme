@@ -10,6 +10,7 @@
 
 .column-show-product {
   display: flex;
+  height: 400px;
 }
 
 .products-image {
@@ -45,9 +46,39 @@
 
 .image-header {
   margin-left: 10px;
+  width: 40%;
 }
 .image-profile-producer-show {
   width: 200px;
+}
+
+.image-producer-show {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.link-producer-list {
+  width: 60%;
+}
+
+.image-producer-show1 {
+  width: 50%;
+  object-fit: cover;
+}
+
+.image-producer-show2 {
+  width: 50%;
+  object-fit: cover;
+}
+.image-producer-show3 {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+}
+
+.d-flex {
+ height: 35%;
 }
 
 .image-producer-show-sketch {
@@ -61,4 +92,8 @@
 
 .btn-show-orders-page {
   background-color: #F3B88A;
+}
+
+.btn-show-orders-page.btn-green {
+  background-color: #4EC1C2;
 }
