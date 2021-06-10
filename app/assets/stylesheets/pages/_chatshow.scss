@@ -12,20 +12,21 @@
 
 .chat-form-container {
   border-radius: 8px;
-    border: #F3B88A 1px solid;
-    height: 500px;
-    width: 400px;
-    background-color: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    font-family: Roboto;
-    font-style: bold;
-    margin: 0 auto;
-    margin-top: 75px;
+  border: #F3B88A 1px solid;
+  height: 500px;
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-family: Roboto;
+  font-style: bold;
+  margin: 0 auto;
+  margin-top: 75px;
   }
 
 .chat-message-bar {
   margin: 0 auto;
-  width: 75%;
+  bottom: 0px;
+  width: 60%;
 }
 
 .chat-header {
@@ -46,5 +47,5 @@
   text-transform: uppercase;
   position: absolute;
   justify-content: center;
-  margin-left: 50px;
+  margin-left: 20px;
 }
