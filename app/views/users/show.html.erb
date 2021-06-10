@@ -48,7 +48,7 @@
               <%= cl_image_tag product.photo.key, class: "products-image"%>
               <div class="product-content-details">
                 <span><%= product.name %></span>
-                <p><%= product.detail %></p>
+                <p><%= product.detail.truncate(100, omission: '...') %></p>
                 <%= link_to "See our product", product_path(product), method: :get, class: "btn-show-orders-page" %>
               </div>
             </div>

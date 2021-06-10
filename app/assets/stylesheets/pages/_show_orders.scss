@@ -4,12 +4,32 @@
 }
 
 .container-cart {
+  display: flex;
+  justify-content: center;
   background-image: linear-gradient(transparent 10%, white 160%), asset-url('hero_bg.jpg');
   background-size: cover;
   height: 100vh;
   width: 100%;
-  display: flex;
   position: relative;
+
+  .btn-show-orders-page {
+    position: absolute;
+    background-color: #F3B88A;
+    color: white;
+    padding: 8px;
+    width: 100%;
+    border-radius: 0 0 6px 6px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    bottom: 0;
+
+    &:hover {
+      padding: 8px;
+      width: 100%;
+      border-radius: 0 0 6px 6px;
+    }
+  }
 }
 
 .header-show-order-page {
@@ -17,22 +37,6 @@
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 20px;
-}
-
-
-.btn-show-orders-page {
-    background-color: #F3B88A;
-    color: white;
-    padding: 8px;
-    border-radius: 8px;
-    width: 200px;
-    text-align: center;
-    font-size: 14px;
-    text-transform: uppercase;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    margin-left: 31%;
-    position: absolute;
-    margin-left: 7%;
 }
 
 .btn-show-orders-page:hover {
@@ -44,14 +48,15 @@
 }
 
 .first-div {
-    border-radius: 8px;
-    border: #F3B88A 1px solid;
-    height: 500px;
-    width: 400px;
-    background-color: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    font-family: Roboto;
-    font-style: bold;
+  position: relative;
+  border-radius: 8px;
+  border: #F3B88A 1px solid;
+  height: 500px;
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-family: Roboto;
+  font-style: bold;
 }
 
 .total-amount {
@@ -65,6 +70,8 @@
   align-items: center;
   color: #000000;
   padding: 5px;
+  justify-content: center;
+  padding-top: 150px;
 }
 
 .cart-name {
