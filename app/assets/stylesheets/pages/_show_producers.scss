@@ -102,10 +102,14 @@
   }
 
   .btn-show-orders-page {
+    position: absolute;
     margin: 0;
     width: 100%;
     left: 0;
     bottom: 0;
+    text-align: center;
+    color: white;
+    padding: 8px;
     border-radius: 0 0 6px 0;
 
     &:hover {
