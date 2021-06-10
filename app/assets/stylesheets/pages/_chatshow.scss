@@ -1,0 +1,54 @@
+.chat-main-container {
+  background-image: linear-gradient(transparent 10%, white 160%), asset-url('hero_bg.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+#messages {
+  padding-left: 52px;
+  font-family: Roboto;
+}
+
+.chat-form-container {
+  border-radius: 8px;
+  border: #F3B88A 1px solid;
+  height: 500px;
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-family: Roboto;
+  font-style: bold;
+  margin: 0 auto;
+  margin-top: 75px;
+  }
+
+.chat-message-bar {
+  margin: 0 auto;
+  bottom: 0px;
+  width: 60%;
+}
+
+.chat-header {
+  font-size: 30px;
+  text-align: center;
+  padding: 15px;
+  font-family: Roboto;
+}
+
+.btn-chat-page {
+  background-color: #F3B88A;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  position: absolute;
+  justify-content: center;
+  margin-left: 20px;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}

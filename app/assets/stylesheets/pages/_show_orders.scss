@@ -4,7 +4,7 @@
 }
 
 .container-cart {
-  background-image: asset-url('hero_bg.jpg');
+  background-image: linear-gradient(transparent 10%, white 160%), asset-url('hero_bg.jpg');
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -129,29 +129,27 @@
   top: 228px;
   font-style: normal;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 25px;
   line-height: 20px;
   display: flex;
   align-items: center;
-  padding-top: 18px;
+  padding-top: 30px;
   color: #252525;
   padding-left: 18px;
+  justify-content: center;
+  font-family: "BioRhyme";
 }
 
 .title-confirmation {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
   position: relative;
   font-family: Roboto;
 }
 
 .title-bonappetit {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
   position: relative;
   font-family: Roboto;
 }
