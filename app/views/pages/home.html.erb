@@ -3,14 +3,14 @@
     <div class="cta">
       <div class="flex-direction-row">
         <div class="flex-basis-fifty">
-          <div class="flex-direction-column top-margin left-margin">
+          <div class="flex-direction-column top-margin left-margin extra-padding">
             <div class="logo-position">
               <%= image_tag "logo.png", class:"logo-size" %>
             </div>
             <div class="left-section">
-              <h1>Meet the farmers around you!</h1>
-              <p>Tell us where you are and we will introduce you to the amazing food producers around you</p>
-              <div class="flexsearch">
+              <h1 class="letter-space">Meet the farmers around you!</h1>
+              <p class="extra-padding letter-space">Tell us where you are and we will introduce you to the amazing food producers around you</p>
+              <div class="flexsearch extra-padding">
                   <%= simple_form_for :search, html: { class: "searchbar"}, url: products_path, method: :get do |f| %>
                   <%= f.input :query, label: false, placeholder: "Find a product" %>
                   <%= button_tag type: 'submit',class: "searchicon" do %>
@@ -26,16 +26,17 @@
             <div class="main-container-index">
               <div class="grid-card-products">
                 <% @users.each_slice(2).with_index do |userpair, index| %>
-                  <div class="row <%= index.odd? ? 'justify-content-start right-margin' : 'justify-content-end left-margin' %>">
+                  <div class="row <%= index.odd? ? 'justify-content-start' : 'justify-content-end' %>">
                     <% userpair.each do |producer| %>
-                    <div class="index-card-products slight-right-margin">
+                    <div class="index-card-products slight-right-margin col-5">
                       <%= cl_image_tag producer.picture, class: "products-image"%>
                       <div class="product-card-infos">
                         <h4 class="product-card-name"> <%= link_to producer.farmname, user_path(producer), {:style=>'color:#000; text-decoration: none'} %>
                         </h4>
                         <div class="products-card-detail">
-                          <p> <%= producer.address %></p>
-                          <p> <%= producer.origin %></p>
+                          <p class="orange"> <%= producer.category.upcase %> PRODUCER</p>
+                          <p><%= producer.address %></p>
+                          <!-- <p> <b><%= producer.origin %></b></p> -->
                         </div>
                       </div>
                     </div>
