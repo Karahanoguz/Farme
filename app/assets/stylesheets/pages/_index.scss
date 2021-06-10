@@ -4,11 +4,10 @@
 @import "show_products";
 
 .products-image {
-  min-height: 120px;
-  min-width: 120px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  padding: 12px;
-  border-radius: 20px;
+  border-radius: 6px;
 }
 
 
@@ -69,17 +68,12 @@ h1.index-page-title {
 }
 
 h4.product-card-name {
-  height: 49px;
-  left: 255px;
-  top: 228px;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
-  padding-top: 18px;
   color: #252525;
+  margin-bottom: 0;
 }
 
 h3.pricing-card-products {

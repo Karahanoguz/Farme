@@ -8,7 +8,7 @@
               <%= image_tag "logo.png", class:"logo-size" %>
             </div>
             <div class="left-section">
-              <h1 class="letter-space">Meet the farmers around you!</h1>
+              <h1 class="home-title letter-space">Meet the farmers around you!</h1>
               <p class="extra-padding letter-space">Tell us where you are and we will introduce you to the amazing food producers around you</p>
               <div class="flexsearch extra-padding">
                   <%= simple_form_for :search, html: { class: "searchbar"}, url: products_path, method: :get do |f| %>
@@ -28,16 +28,13 @@
                 <% @users.each_slice(2).with_index do |userpair, index| %>
                   <div class="row <%= index.odd? ? 'justify-content-start' : 'justify-content-end' %>">
                     <% userpair.each do |producer| %>
-                    <div class="index-card-products slight-right-margin col-5">
+                    <div class="index-card-products col-5">
                       <%= cl_image_tag producer.picture, class: "products-image"%>
                       <div class="product-card-infos">
                         <h4 class="product-card-name"> <%= link_to producer.farmname, user_path(producer), {:style=>'color:#000; text-decoration: none'} %>
                         </h4>
-                        <div class="products-card-detail">
-                          <p class="orange"> <%= producer.category.upcase %> PRODUCER</p>
-                          <p><%= producer.address %></p>
-                          <!-- <p> <b><%= producer.origin %></b></p> -->
-                        </div>
+                        <p class="orange"> <%= producer.category.upcase %> PRODUCER</p>
+                        <p><%= producer.address %></p>
                       </div>
                     </div>
                     <% end %>

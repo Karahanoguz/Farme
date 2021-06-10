@@ -2,14 +2,6 @@
 
 // Cards.
 
-.products-image {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-  padding: 12px;
-  border-radius: 20px;
-}
-
 .producer-index-image {
   height: 100px;
   margin-right: 10px;
@@ -47,18 +39,12 @@
 }
 
 h4.producer-card-name  {
-  height: 49px;
-  left: 255px;
-  top: 228px;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
-  padding-top: 18px;
-  padding-left: 20px;
   color: #252525;
+  margin-bottom: 0;
 }
 
 h3.pricing-card-products  {
