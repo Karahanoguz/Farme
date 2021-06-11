@@ -1,19 +1,18 @@
-
 <div class="show-producer-page-main container">
-
   <!--  ROW 1 -->
-
-          <h6 class="header-link"><%= link_to "Go back to producers list", users_path(@user), {:style=>'color:#000; text-decoration: none'} %></h6>
+  <h6 class="header-link"><%= link_to "Go back to producers list", users_path(@user), {:style=>'color:#000; text-decoration: none'} %></h6>
   <div class="row">
-    <div class="col-12 col-lg-8">
+    <div class="col-12 col-lg-7">
       <div class="column-show-product">
         <div class="link-producer-list">
-          <%= image_tag "farmer_land.png", class:"image-producer-show" %>
+          <%= image_tag @user.products.first.picture_one, class:"image-producer-show" %>
         </div>
         <div class="image-header">
-          <%= image_tag "farmer_sow.png", class:"image-producer-show1" %>
-          <%= image_tag "farmer_seed_land.png", class:"image-producer-show2" %>
-          <%= image_tag "farmer_seeds.png", class:"image-producer-show3" %>
+          <div class="d-flex" >
+            <%= image_tag @user.products.first.picture_two, class:"image-producer-show1" %>
+            <%= image_tag @user.products.first.picture_three, class:"image-producer-show2" %>
+          </div>
+          <%= image_tag @user.products.first.picture_four, class:"image-producer-show3" %>
         </div>
       </div>
       <div class="body-producer-show-page">
@@ -30,27 +29,47 @@
       </div>
     </div>
 
-    <div class="col-12 col-lg-4">
+    <div class="col-12 col-lg-5">
       <div class="producer">
-        <div class="container-first-item">
-          <%= cl_image_tag @user.picture, class: "image-profile-producer-show"%>
-          <h6><%= @user.farmname.capitalize  %></h6>
-          <p><%= @user.address %></p>
-          <p><%= @user.website %></p>
-            <%= image_tag "farmer.png", class:"image-producer-show-sketch" %>
-        </div>
-
-        <div class="container-second-item">
-          <% @user.products.each do |product|%>
-          <%= cl_image_tag product.photo.key, class: "products-image"%>
-            <%= product.name %>
-            <%= product.detail %>
-        </div>
-          <div>
-            <%= link_to "See our product", product_path(product), method: :get, class: "btn-show-orders-page" %>
+        <div class="products-list">
+          <%= image_tag "farmer.png", class:"image-producer-show-sketch" %>
+          <div class="container-second-item">
+            <%= cl_image_tag @user.picture, class: "products-image"%>
+            <div class="product-content-details">
+              <span><%= @user.farmname.capitalize  %></span>
+              <p><%= @user.address %></p>
+              <%= link_to "Visit us", @user.website, target: '_blank', class: "btn-show-orders-page btn-green" %>
+            </div>
           </div>
-          <%end %>
+        </div>
+        <div class="products-list">
+          <% @user.products.each do |product|%>
+            <div class="container-second-item">
+              <%= cl_image_tag product.photo.key, class: "products-image"%>
+              <div class="product-content-details">
+                <span><%= product.name %></span>
+                <p><%= product.detail.truncate(100, omission: '...') %></p>
+                <%= link_to "See our product", product_path(product), method: :get, class: "btn-show-orders-page" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -14,15 +14,13 @@ body {
 
 /* --- CTA --- */
 
-.container-hero {
-  // width: 100%;
-  // margin-top: 0;
-}
-
 .flex-hero {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+}
+
+.home-title {
+  font-size: 52px;
 }
 
 .cta {
@@ -38,8 +36,8 @@ body {
 }
 
 .cta > h1 {
-    margin-top: 50px;
-    margin-left: 160px;
+  margin-top: 50px;
+  margin-left: 160px;
 }
 
 /* --- Search bar --- */
@@ -83,6 +81,18 @@ body {
 
 .left-section .search_query {
   flex-grow: 1 !important;
+}
+
+#search_query {
+  min-height: 60px;
+  border-radius: 6px 0 0 6px;
+}
+
+.searchicon {
+  width: 60px;
+  height: 60px;
+  border-radius: 0 6px 6px 0;
+  border: none;
 }
 
 /* --- Infographic --- */
@@ -130,11 +140,12 @@ body {
 .logo-size {
   width: auto;
   height: 45px;
-  padding-left: 20px;
+  // padding-left: 20px;
 }
 
 .logo-position {
-  padding-left: 40px;
+  padding-left: 70px;
+  padding-top: 15px;
 }
 
 .top-margin {
@@ -146,16 +157,13 @@ body {
 }
 
 #homepage .left-margin {
-  margin-left: 275px;
+  margin-left: 75px;
 }
 
 .right-margin {
   margin-right: 80px;
 }
 
-#homepage .index-card-products {
-  width: 40%;
-}
 
 .slight-right-margin {
   margin-right: 15px;
@@ -163,10 +171,66 @@ body {
 
 .abs-pos-margin {
   position: absolute;
+  padding: 36px 0 0 25px;
   margin-left: 40px;
+  max-height: 100vh;
   overflow: hidden;
 }
 
+#homepage .grid-card-products {
+  margin-right: -150px;
+}
+
+#homepage .products-card-detail {
+  padding: 5px;
+}
+
+#homepage .products-card-detail p {
+  width: 80%;
+  font-size: 14px;
+}
+
+#homepage .row {
+  margin-top: 0px;
+}
+
+#homepage .index-card-products {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 18px;
+}
+
+.extra-padding {
+  padding-top: 26px;
+}
+
+.letter-space {
+  letter-spacing: 1.5px;
+}
+
+#homepage .product-card-infos {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px 0 12px;
+
+  .producer-card-name {
+    margin-bottom: 0 !important;
+  }
+
+  p:last-of-type {
+    opacity: 0.6;
+  }
+
+  p {
+    margin-bottom: 6px !important;
+    font-size: 12px;
+  }
+}
+
+.orange {
+  color: $orange
+}
 // .typewriter {
 
 //   overflow: hidden; /* Ensures the content is not revealed until the animation */

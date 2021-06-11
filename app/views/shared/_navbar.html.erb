@@ -1,24 +1,25 @@
 <nav class="navbar-design">
   <a class="navbar-brand" href="/"><img class="area" hight="20px" width="80px" src="/assets/logo-3e9be16164773229b9026a40a6253c3d48a23086dfb544640e3ac3f193f56b76.png"></a>
 
+  <div class="navbar__right">
+    <div class="navbar" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/users">Farmers <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products">Products</a>
+            </li>
+      </ul>
 
-  <div class="navbar" id="navbarSupportedContent">
-    <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link" href="/users">Farmers <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/products">Products</a>
-          </li>
-    </ul>
-
-    <form class="simple_form-search" novalidate="novalidate" action="/products" accept-charset="UTF-8" method="get">
-      <div class="form-group string required search_query">
-        <input class="form-control string required" placeholder="Find a product" type="text" name="search[query]" id="search_query">
-      </div>
-      <button name="button" type="submit" class="searchicon">
-        <i class="fas fa-search"></i>
-      </button>
-    </form>
+      <form class="simple_form-search" novalidate="novalidate" action="/products" accept-charset="UTF-8" method="get">
+        <div class="form-group string required search_query">
+          <input class="form-control string required" placeholder="Find a product" type="text" name="search[query]" id="search_query">
+        </div>
+        <button name="button" type="submit" class="searchicon">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </div>
   </div>
 </nav>

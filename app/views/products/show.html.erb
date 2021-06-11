@@ -1,41 +1,59 @@
-<h6 class="header-link"><%= link_to "Go back to products list", products_path(@user), {:style=>'color:#000; text-decoration: none'} %></h6>
-
-<div class="show-product-page-main container">
-
-  <div class="container a">
-    <div class="link-producer-list">
-      <%= cl_image_tag @product.photo.key, class: "product-image" %>
-    </div>
-    <div class="copy-body">
-      <h4> <%= @product.name %> </h4>
-      <p> <%= @product.location %> </p>
-      <p> <%= @product.detail %> </p>
-      <p> <%= @product.price %> € </p>
-    </div>
-  </div>
-
-
-  <div class="container b">
-
-    <div class="container c">
-      <%= cl_image_tag @product.photo.key, class: "image-show-page-product" %>
-      <p> <%= @product.price %> € </p>
-      <div class="form-">
-        <div class="form-input">
-          <%= simple_form_for [ @product, @order_product ] do |f| %>
-            <%= f.input :quantity %>
-            <%= f.submit "Add to Cart", class: "form-btn btn" %>
-          <% end %>
+<div class="show-producer-page-main container">
+  <h6 class="header-link"><%= link_to "Go back to products list", products_path(@user), {:style=>'color:#000; text-decoration: none'} %></h6>
+  <div class="row">
+    <div class="col-12 col-lg-7">
+      <div class="column-show-product">
+        <div class="link-producer-list">
+          <%= image_tag @product.picture, class:"image-producer-show" %>
+        </div>
+        <div class="image-header">
+          <div class="d-flex" >
+            <%= image_tag @product.picture_two, class:"image-producer-show1" if @product.picture_two.present? %>
+            <%= image_tag @product.picture_three, class:"image-producer-show2" if @product.picture_three.present? %>
+          </div>
+          <%= image_tag @product.picture_four, class:"image-producer-show3" if @product.picture_four.present? %>
+        </div>
+      </div>
+      <div class="body-producer-show-page">
+        <div class="copy-body">
+          <h4><%=  @product.name %></h4>
+          <p><%= @product.location %></p>
+          <p><%= @product.detail %></p>
+          <strong><%= @product.price %>€</strong>
         </div>
       </div>
     </div>
 
-    <div class="container d">
-      <h4>Producer</h4>
-
-      <p><%= link_to "Chat", start_chat_path(user: @product.user), class: "form-btn btn" %></p>
+    <div class="col-12 col-lg-5">
+      <div class="producer">
+        <div class="products-list">
+          <div class="container-first-item">
+            <%= cl_image_tag  @product.picture, class: "products-image"%>
+            <div class="product-content-details">
+              <div class="form-">
+                <div class="form-input">
+                  <span><%=  @product.name %> (<%= @product.price %>€)</span>
+                  <%= simple_form_for [ @product, @order_product ] do |f| %>
+                    <%= f.input :quantity %>
+                    <%= f.submit "Add to Cart", class: "form-btn btn btn-green" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="products-list">
+          <div class="container-first-item">
+            <%= cl_image_tag @user.picture, class: "products-image"%>
+            <div class="product-content-details">
+              <span><%=  @user.farmname %></span>
+              <p><%= p@user.details %></p>
+               <p><%= link_to "Chat", start_chat_path(user: @product.user), class: "form-btn btn btn-orange" %></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
 </div>
 
