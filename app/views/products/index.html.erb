@@ -2,20 +2,18 @@
   <h1 class="index-page-title">CURRENT SEARCH</h1>
   <h1 class="current-search-title"> <%= @products.first.product_category %></h1>
 </div>
-
-
-  <div class="main-container-index">
-    <div class="grid-card-products">
-      <% if @products.first.present? %>
-        <% @products.each do |product|%>
+<div class="main-container-index">
+  <div class="grid-card-products">
+    <% if @products.first.present? %>
+      <% @products.each do |product|%>
+        <%= link_to product_path(product) do %>
           <div class="index-card-products">
             <div class="product-card-content">
               <%if product.photo.attached? %>
                 <%= cl_image_tag product.photo.key, class: "products-image"%>
               <% end %>
-
               <div class="product-card-infos">
-                <h4 class="product-card-name"> <%= product.name %><%= link_to "More infos", product_path(product), class: "product-link"%></h4>
+                <h4 class="product-card-name"> <%= product.name %></h4>
                   <div class="products-card-detail">
                     <p> <%= product.detail %></p>
                   </div>
@@ -23,15 +21,14 @@
             </div>
               <h3 class="pricing-card-products">€ <%= product.price %> / unit</h3>
           </div>
-
-          <% end %>
-      <% else %>
-        <h4>Sorry, we don't have this product 😔</h4>
+        <% end %>
       <% end %>
-
-    </div>
-      <div id="map" style="width: 40%; height: 100vh;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+    <% else %>
+      <h4>Sorry, we don't have this product 😔</h4>
+    <% end %>
+  </div>
+  <div id="map" style="width: 50%; height: 100vh;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
