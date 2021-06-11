@@ -12,7 +12,7 @@
               <p class="extra-padding letter-space">Tell us where you are and we will introduce you to the amazing food producers around you</p>
               <div class="flexsearch extra-padding">
                   <%= simple_form_for :search, html: { class: "searchbar"}, url: products_path, method: :get do |f| %>
-                  <%= f.input :query, label: false, placeholder: "Find a product" %>
+                  <%= f.input :query, label: false, input_html: { autocomplete: "off", placeholder: "Find a product" }  %>
                   <%= button_tag type: 'submit',class: "searchicon" do %>
                     <i class="fas fa-search"></i>
                   <% end %>
