@@ -12,7 +12,7 @@
 
     <div class="chat-message-bar">
     <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-      <%= f.input :content, label: false, placeholder: "Type your message here..." %>
+      <%= f.input :content, input_html: {autocomplete: "off"}, label: false, placeholder: "Type your message here..." %>
       <%= f.submit class: "btn-chat-page"%>
     <% end %>
     </div>
